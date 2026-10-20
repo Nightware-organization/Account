@@ -91,7 +91,7 @@ main{max-width:1080px;padding-top:34px}
     <a class="active" href="#account" data-view="account"><i data-lucide="user-round"></i><span>Account overview</span></a>
     <a href="#security" data-view="security"><i data-lucide="shield-check"></i><span>Security</span></a>
     <a href="#preferences" data-view="preferences"><i data-lucide="sliders-horizontal"></i><span>Preferences</span></a>
-    <a href="./index.html" id="powerspace-link" title="Open Nightware Powerspace"><i data-lucide="panels-top-left"></i><span>Powerspace</span></a>
+    <a href="https://nightware-organization.github.io/PowerSpace." id="powerspace-link" title="Open Nightware Powerspace"><i data-lucide="panels-top-left"></i><span>Powerspace</span></a>
   </nav>
   <div class="sidebar-bottom">
     <button class="theme-btn" id="theme-toggle"><i data-lucide="moon-star" id="theme-symbol"></i><span>Switch appearance</span></button>
@@ -299,6 +299,6 @@ $('remove-photo').addEventListener('click', async () => {
 function toggleTheme() { const next = root.dataset.theme === 'dark' ? 'light' : 'dark'; root.dataset.theme = next; document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#09080d' : '#f8f6fc'; if (window.lucide) window.lucide.createIcons(); }
 $('theme-toggle').addEventListener('click', toggleTheme); $('appearance-button').addEventListener('click', toggleTheme);
 document.querySelectorAll('[data-view]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); document.querySelectorAll('[data-view]').forEach(x => x.classList.toggle('active', x === a)); const target = a.dataset.view === 'account' ? 'account' : a.dataset.view === 'security' ? 'security' : 'preferences'; $(target).scrollIntoView({ behavior: 'smooth', block: 'start' }); }));
-$('powerspace-link').href = './index.html';
+$('powerspace-link').href = 'https://nightware-organization.github.io/PowerSpace/';
 </script>
 </body></html>
